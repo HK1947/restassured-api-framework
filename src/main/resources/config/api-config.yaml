@@ -1,0 +1,11 @@
+# Default API Configuration
+
+api:
+  baseUrl: https://reqres.in/api
+  timeout: 30000  # milliseconds
+  logging:
+    enabled: true
+
+# Authentication (if needed)
+auth:
+  type: none  # none, bearer, basic, apiKey

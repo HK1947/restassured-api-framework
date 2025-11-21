@@ -1,0 +1,49 @@
+# Compiled class files
+*.class
+
+# Package files
+*.jar
+*.war
+*.ear
+*.zip
+*.tar.gz
+
+# Maven
+target/
+pom.xml.tag
+pom.xml.releaseBackup
+
+# IDE - IntelliJ
+.idea/
+*.iml
+out/
+
+# IDE - Eclipse
+.classpath
+.project
+.settings/
+bin/
+
+# IDE - VS Code
+.vscode/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+logs/
+
+# Test output
+test-output/
+allure-results/
+allure-report/
+
+# Temp
+*.tmp
+*.temp
+
+# Environment files
+.env
+.env.local

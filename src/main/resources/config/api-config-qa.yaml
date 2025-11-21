@@ -1,0 +1,7 @@
+# QA API Configuration
+
+api:
+  baseUrl: https://reqres.in/api
+  timeout: 30000
+  logging:
+    enabled: false  # Disable verbose logging in QA

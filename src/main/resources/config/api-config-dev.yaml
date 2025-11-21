@@ -1,0 +1,7 @@
+# Development API Configuration
+
+api:
+  baseUrl: https://reqres.in/api
+  timeout: 60000  # Longer timeout for debugging
+  logging:
+    enabled: true
