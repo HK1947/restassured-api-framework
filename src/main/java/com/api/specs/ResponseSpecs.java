@@ -246,7 +246,7 @@ public final class ResponseSpecs {
      */
     public static ResponseSpecification hasHeader(String headerName) {
         return new ResponseSpecBuilder()
-                .expectHeader(headerName, notNullValue())
+                .expectHeader(headerName, notNullValue(String.class))
                 .log(LogDetail.ALL)
                 .build();
     }
