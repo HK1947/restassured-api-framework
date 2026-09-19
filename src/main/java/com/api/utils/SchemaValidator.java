@@ -5,6 +5,7 @@ import io.restassured.response.Response;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.hamcrest.Matcher;
+import org.hamcrest.MatcherAssert;
 
 import java.io.InputStream;
 
@@ -41,7 +42,7 @@ public final class SchemaValidator {
      * @param schemaFileName Schema file name (without path)
      * @return JsonSchemaValidator matcher
      */
-    public static Matcher<?> matchesSchema(String schemaFileName) {
+    public static Matcher<String> matchesSchema(String schemaFileName) {
         String schemaPath = SCHEMA_BASE_PATH + schemaFileName;
         logger.info("Loading schema: {}", schemaPath);
         return JsonSchemaValidator.matchesJsonSchemaInClasspath(schemaPath);
@@ -69,12 +70,7 @@ public final class SchemaValidator {
      */
     public static boolean isValidSchema(String jsonBody, String schemaFileName) {
         try {
-            io.restassured.RestAssured.given()
-                    .body(jsonBody)
-                    .when()
-                    .then()
-                    .assertThat()
-                    .body(matchesSchema(schemaFileName));
+            MatcherAssert.assertThat(jsonBody, matchesSchema(schemaFileName));
             return true;
         } catch (AssertionError e) {
             logger.warn("Schema validation failed: {}", e.getMessage());
