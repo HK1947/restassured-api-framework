@@ -1,3 +1,5 @@
+![Java CI](https://github.com/HK1947/restassured-api-framework/actions/workflows/ci.yml/badge.svg)
+
 # Rest Assured API Framework
 
 A production-ready REST API automation framework built with Java and Rest Assured, following industry best practices.
