@@ -22,7 +22,7 @@
         <!-- Dependency Versions -->
         <restassured.version>5.4.0</restassured.version>
         <testng.version>7.9.0</testng.version>
-        <jackson.version>2.16.1</jackson.version>
+        <jackson.version>2.18.10</jackson.version>
         <lombok.version>1.18.30</lombok.version>
         <log4j.version>2.23.0</log4j.version>
         <allure.version>2.25.0</allure.version>
